@@ -1,0 +1,6 @@
+[submodule "non-orientable-limit-set-v2"]
+	path = non-orientable-limit-set-v2
+	url = git@github.com:sayantangkhan/non-orientable-limit-set-v2.git
+[submodule "geodesics-in-thin-part"]
+	path = geodesics-in-thin-part
+	url = git@github.com:sayantangkhan/geodesics-in-thin-part.git
