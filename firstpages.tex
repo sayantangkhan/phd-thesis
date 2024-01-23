@@ -1,0 +1,181 @@
+\thispagestyle{empty}
+\newgeometry{left = 1in, right = 1in, bottom = 1in, top = 2.5in}
+
+%%TITLE PAGE
+
+\begin{center}
+        \Huge
+        \thesistitle
+
+        \vspace{12pt}
+
+        \Large
+        by
+
+        \vspace{12pt}
+
+        \thesisauthor
+
+        \vspace{0.5in}
+
+        \large
+        A dissertation submitted in partial fulfillment \\
+        of the requirements for the degree of \\
+        \thesisdegree \\
+        (\thesisdepartment) \\
+        in The University of Michigan \\
+        \thesisyear \\
+
+\end{center}
+
+\vfill
+\large
+\noindent Doctoral Committee:
+\\
+\\
+\thesiscommittee
+
+\normalsize
+\restoregeometry
+\newpage
+\thispagestyle{empty}
+
+
+
+
+%%COPYRIGHT PAGE
+
+
+\hspace{0pt}
+\vfill
+\begin{center}
+        \thesisauthor \\
+        \thesisemail \\
+        ORCID iD: \thesisorcid \\
+        \vspace{1in}
+        \copyright\hspace{0.2in}{\thesisauthor}\hspace{0.2in}\thesisyear\\ % no underline, as of Rackham's requirement in 2022
+        %\underline{\copyright\hspace{0.2in}{\thesisauthor}\hspace{0.2in}\thesisyear}\\ % Use this line instead of the previous one if you need the underline
+        \vspace{0.1in}All Rights Reserved
+\end{center}
+\vfill
+\hspace{0pt}
+
+\newpage
+
+%%DEDICATION PAGE
+
+\titleformat{\chapter}
+[display] %shape
+{\filcenter \bf \Large} %format
+{} % label (check ``\titlelabel'' in documentation)
+{-20pt} %sep
+{} %before-code
+{} %after-code
+\titlecontents{chapter}
+[0pt] %left
+{\bf} %above-code
+{} %numbered entry format
+{} %unnumbered entry format
+{\titlerule*[5pt]{\normalfont.}\contentspage}  % filler page format
+[\addvspace{.5pc}] %below-code
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+% \addcontentsline{toc}{chapter}{DEDICATION}
+
+% \hspace{0pt}
+% \vfill
+% \begin{center}
+%         {\it \large \thesisdedication}
+% \end{center}
+% \vfill
+% \hspace{0pt}
+
+
+\restoregeometry
+\thesisspacing
+
+%% ACKNOWLEDGEMENTS PAGE
+
+
+\chapter{ACKNOWLEDGEMENTS}
+\input{acknowledgements}
+
+% Preface; Uncomment if needed
+% \chapter{PREFACE}
+% \input{acknowledgements}
+
+\tableofcontents
+\hypersetup{linkcolor = blue}
+
+% List of Tables; Uncomment if needed
+% \chapter{LIST OF TABLES}
+% \input{acknowledgements}
+%
+% List of Figures; Uncomment if needed
+% \chapter{LIST OF FIGURES}
+% \input{acknowledgements}
+%
+% List of Appendices; Uncomment if needed
+% \chapter{LIST OF APPENDICES}
+% \input{acknowledgements}
+%
+% List of Abbreviations; Uncomment if needed
+% \chapter{LIST OF ABBREVIATIONS}
+% \input{acknowledgements}
+
+% Abstract
+\chapter{ABSTRACT}
+\input{abstract}
+
+% Settings for Chapters
+\titleformat{\chapter}
+[display] %shape
+{\filcenter \bf \Large} %format
+{CHAPTER \thechapter} % label (check ``\titlelabel'' in documentation)
+{\parskip} %sep
+{} %before-code
+{} %after-code
+\titlecontents{chapter}
+[0pt] %left
+{\bf} %above-code
+{CHAPTER \thecontentslabel: } %numbered entry format
+{} %unnumbered entry format
+{\titlerule*[5pt]{\normalfont.}\contentspage}  % filler page format
+[\addvspace{.5pc}] %below-code
+
+% Settings for Sections
+\titleformat{\section}
+[hang] %shape
+{\bf \large} %format
+{\thesection : } % label (check ``\titlelabel'' in documentation)
+{0pt} %sep
+{} %before-code
+{} %after-code
+\titlecontents{section}
+[10pt] %left
+{} %above-code
+{\thecontentslabel: } %numbered entry format
+{} %unnumbered entry format
+{\titlerule*[5pt]{\normalfont.}\contentspage}  % filler page format
+[\addvspace{.5pc}] %below-code
+
+%Settings for Subsections
+\titleformat{\subsection}
+[hang] %shape
+{\bf} %format
+{\thesubsection : } % label (check ``\titlelabel'' in documentation)
+{0pt} %sep
+{} %before-code
+{} %after-code
+\titlecontents{subsection}
+[20pt] %left
+{} %above-code
+{\thecontentslabel: } %numbered entry format
+{} %unnumbered entry format
+{\titlerule*[5pt]{\normalfont.}\contentspage}  % filler page format
+[\addvspace{.5pc}] %below-code
+
+%%% Local Variables:
+%%% TeX-master: "main"
+%%% End:

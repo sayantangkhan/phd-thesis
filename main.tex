@@ -1,0 +1,83 @@
+\documentclass[leqno, 12pt]{report} % leqno = left equation numbering, reqno = right equation numbering
+\pdfoutput=1
+\usepackage{mathpreamble}
+
+%%%%%%%% Thesis data
+\newcommand{\thesistitle}{Dynamics on the Moduli Space of Non-Orientable Surfaces} % in Title Caps (not ALLCAPS).
+\newcommand{\thesisauthor}{Sayantan Khan} % as in Wolvering Access, but middle initial instead of middle name is okay.
+\newcommand{\thesisemail}{saykhan@umich.edu}
+\newcommand{\thesisorcid}{0000-0003-2582-0710}  %your ORCID iD. If you don't want it to display,
+        % remove the line "ORCID iD: \thesisorcid \\" from
+        %titlepage??.tex
+\newcommand{\thesisdegree}{Doctor of Philosophy}
+\newcommand{\thesisdepartment}{Mathematics}
+\newcommand{\thesisyear}{2024}
+\newcommand{\thesiscommittee}{
+        \hspace*{10pt} Professor Henri Poincare, Chair\\
+        \hspace*{10pt} Professor Euclid\\
+        \hspace*{10pt} Associate Professor Isaac Newton\\
+        \hspace*{10pt} Professor David Hilbert\\
+        \hspace*{10pt} Assistant Professor Friedrich Gauss
+        }
+\newcommand{\thesisdedication}{Insert a thesis dedication} %your dedication here
+
+\newcommand{\thesisspacing}{\onehalfspacing} %change to \newcommand{\spacing}{\doublespacing} if you want the thesis to be double spaced. As of 2021, both are allowed by Rackham.
+%%%%%%%%%
+
+
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\thechapter}{\uppercase\expandafter{\romannumeral\numexpr\value{chapter}-2\relax\relax}} % Tweak the number "2" to adjust the chapter numbering, if necessary. This is a workaround by Yifeng Huang (2022) to avoid messing up the pdf bookmarks due to restarting the counter.
+\renewcommand{\bibname}{BIBLIOGRAPHY}
+\numberwithin{equation}{section}
+\numberwithin{theorem}{chapter}        % Numbers theorems "x.y" where x
+%                                                                                       is the section number, y is the
+%                                                                                       theorem number
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%Title page, copyright page, dedication, acknowledgements and abstract.
+%acknowledgements should be written on a file acknowledgements.tex
+%abstract should be written on a file abstract.tex
+\input{firstpages.tex}
+
+
+
+%Note: Chapter titles should be in titlecaps
+% Chapter 1 - Introduction
+
+\chapter{Introduction}
+\label{chap:introduction}
+\pagenumbering{arabic} % arabic numbers (1,2,...) for pages
+\setcounter{page}{1} % setting this as page 1
+\input{chapter1-introduction.tex}
+
+Combine the introductions of both papers with some more context.
+
+% Chapter 2 - Some chapter
+\chapter{Background}
+\label{chap:background}
+\input{chapter2-background}
+
+\chapter{Limit set of non-orientable mapping class groups}
+\label{chap:limit-set-paper}
+
+\input{non-orientable-limit-set-v2/introduction.tex}
+\input{non-orientable-limit-set-v2/background.tex}
+\input{non-orientable-limit-set-v2/lower-bound.tex}
+\input{non-orientable-limit-set-v2/upper-bound.tex}
+\input{non-orientable-limit-set-v2/quasi-convex.tex}
+
+\chapter{Statistical convex-cocompactness}
+\label{chap:stat-convex-cocompact}
+
+
+\newpage
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+% \bibliographystyle{alpha}
+\printbibliography
+
+\end{document}
