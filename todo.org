@@ -8,5 +8,7 @@
 #+LaTeX_HEADER: \thispagestyle{empty}
 
 * Build fixes
+** TODO Theorem numbering
+Make sure the theorem numbering works properly. Something funky is happening right now.
 ** References
 ** Images
