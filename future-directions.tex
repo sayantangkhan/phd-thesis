@@ -1,0 +1,45 @@
+In this chapter, we list some stronger results that we tried to prove, but still remain open, as well as alternative approaches to some of the techniques we used.
+
+\section{Statistical convex core of $\teich(\no_g)$}
+\label{sec:stat-conv-core-of-full}
+
+Recall that in this thesis, we showed that the action of $\mcg(\no_g)$ on $\systole(\no_g)$ is statistically convex-cocompact for arbitrarily small $\vept$.
+While this is good enough to get many of the Patterson-Sullivan theoretic results, since the limit set of the $\mcg(\no_g)$ action on $\systole(\no_g)$ is the same as the limit set of $\mcg(\no_g)$ action on $\teich(\no_g)$, and $\systole(\no_g)$ is distorted by an arbitrarily small amount in $\teich(\no_g)$.
+However, having the action of $\mcg(\no_g)$ on all of $\teich(\no_g)$ be statistically convex-cocompact would provide us better error terms for the counting results we obtain from Patterson-Sullivan theory.
+
+The main issue with showing statistical convex-cocompactness for $\teich(\no_g)$ is that the random walk methods no longer work.
+We outline why that is the case in Section \ref{sec:why-approach-fails}, but we reproduce the argument here for the reader's convenience.
+
+If we wanted to make Proposition \ref{prop:rw-recurrence} work on $\teich(\no_g)$, we would need to similarly show the random walk on $\teich(\no_g)$ is recurrent in a similarly strong sense: i.e. the probability of a length $n$ trajectory staying in the thin part decays exponentially in $n$.
+A consequence of this requirement is that the expected return time to the thick part is finite.
+
+Unlike $\core(\teich(\no_g))$, $\teich(\no_g)$ has two kinds of thin regions.
+\begin{itemize}
+\item[-] Thin region where only two-sided curves get short.
+\item[-] Thin region where some one-sided curve also gets short.
+\end{itemize}
+
+It is the second kind of thin region that poses a problem for $\teich(\no_g)$.
+Minsky's product region theorem (Theorem \ref{thm:prno}) tells us that up to additive error, the metric on these thin regions looks like a product of metrics on some copies of $\mathbb{R}$ (corresponding to the one-sided short curves), some copies of $\mathbb{H}$ (corresponding to the two-sided short curves), and a Teichmüller space of lower complexity.
+Since the random walk is controlled by the metric, the random walk on this product metric space is a product of random walks on each of the components.
+
+In particular, the random walk on the $\mathbb{R}$ component is a symmetric random walk on a net in $\mathbb{R}$: i.e. a symmetric random walk on $\mathbb{Z}$.
+Symmetric random walks on $\mathbb{Z}$ are known to be recurrent, but only in a weak sense: they recur to compact subsets infinitely often, but the expected return time is unbounded.
+
+This means we cannot hope to prove exponentially decaying upper bounds on the probability that a long random walk trajectory stays in the thin part, since that would lead to finite expected return times.
+This is why the random walk approach fails for $\teich(\no_g)$.
+
+Despite the failure of the random walk methods, we still believe that the action of $\mcg(\no_g)$ on $\teich(\no_g)$ is statistically convex-cocompact.
+To see why that might be true, we consider our examples of geodesic segments that leave $\systole(\no_g)$: they are coarsely of the form $[p, \gamma p]$, where $\gamma$ is a psuedo-Anosov on a subsurface where some boundary component is one-sided.
+As a result of that, the boundary component gets short, and the geodesic segments leaves $\systole(\no_g)$.
+However, we have seen that the number of mapping classes has a lower exponential growth rate than the exponential growth rate of the entire mapping class group (this is the content of Section \ref{sec:entr-gap-cons}).
+If we can show that all the geodesic segments that leave $\systole(\no_g)$ are of this form, we will have established statistical convex-cocompactness for $\teich(\no_g)$.
+
+\section{Upgrading random walk phenonomena to uniform measure}
+\label{sec:upgr-rand-walk}
+
+
+
+%%% Local Variables:
+%%% TeX-master: "main"
+%%% End:

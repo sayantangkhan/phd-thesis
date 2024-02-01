@@ -1,4 +1,4 @@
-\todo[inline]{Move the introductions of both the papers here, and remove the paper specific introductions from the chapters.}
+% \todo[inline]{Move the introductions of both the papers here, and remove the paper specific introductions from the chapters.}
 
 
 The moduli space $\mg(\no_g)$ of compact \emph{non-orientable} hyperbolic surfaces of genus $g$ is conjectured to have similarities to infinite volume geometrically finite manifolds (in a manner similar to how moduli spaces of compact orientable surfaces have properties similar to finite volume hyperbolic manifolds).
@@ -63,7 +63,7 @@ Combining Theorem \ref{thm:rational-approximation} with a result of \textcite[Pr
 
 With this description of the limit set, we prove \autoref{thm:qc-fail} by constructing a family of Teichmüller geodesics whose expanding and contracting foliations are of the kind described by \autoref{thm:rational-approximation}, and showing that some point in the interior of the geodesic segment is arbitrarily far from $\systole(\no_g)$.
 
-With a description of the limit set, and an understanding of the failure of convexity of $\systole(\no_g)$, we can try to strengthen the analogy to geometrically finite manifolds by constructing a family of Patterson-Sullivan measures on the limit set.
+By understanding of the failure of convexity of $\systole(\no_g)$, we can try to strengthen the analogy to geometrically finite manifolds by constructing a family of Patterson-Sullivan measures on the limit set.
 However, we still need a convex core, if we want a good analogy with geometrically finite manifolds: we show that the failure of convexity of $\systole(\no_g)$ is not a serious obstruction to understanding geodesic segments whose endpoints lie in $\systole(\no_g)$.
 
 
@@ -219,6 +219,45 @@ Despite having infinitely many ``cusps'', our results show that it is still poss
 \todo[inline]{Talk to Alex about this.}
 
 \subsection*{Organization of the thesis}
+
+The main results in this thesis appear in Chapters \ref{chap:limit-set-paper} and \ref{chap:stat-convex-cocompact}.
+Both the chapters begin with the necessary background and notation required to state and prove the results in the chapter: some of the notation differs between the chapters since they appear as two separate papers.
+
+\subsubsection*{Organization of Chapter \ref{chap:limit-set-paper}}
+
+Section \ref{sec:backgr-meas-foli} contains the background on non-orientable surfaces and measured foliations, and section \ref{sec:backgr-limit-sets} contains the background on limit sets of mapping class subgroups.
+These sections can be skipped and later referred to if some notation or definition is unclear.
+Section \ref{sec:lower-bound-limit-set} contains the proof of \autoref{thm:rational-approximation}, section \ref{sec:upper-bound-limit-set} contains the proof of Theorem \ref{cor:geolimset}, and section \ref{sec:fail-quasi-conv} contains the proof of \autoref{thm:qc-fail}.
+Sections \ref{sec:lower-bound-limit-set}, \ref{sec:upper-bound-limit-set}, and \ref{sec:fail-quasi-conv} are independent of each other, and can be read in any order.
+
+This chapter has also appeared in publication as \cite{limitsetkhan}.
+
+\subsubsection*{Organization of Chapter \ref{chap:stat-convex-cocompact}}
+
+In this subsection, we outline the key ideas behind the proof of the main theorems, and how they relate to each other.
+Interested readers can however read the sections in any order.
+
+\subsubsection*{Weak convexity of $\systole(\no_g)$}
+We construct a projection map from $\teich(\no_g)$ to $\systole(\no_g)$ which takes any one-sided curve of length less than $\vept$ and increases its length to $\vept$, while keeping the lengths and twists of other curves constant.
+We then use Minsky's product region theorem to show that this projection map increases distance by only a factor of $(1 + \vepd)$, where $\vepd$ can be picked to be arbitrarily small.
+
+\subsubsection*{Statistical convexity of $\systole(\no_g)$}
+To show that geodesics in $\systole(\no_g)$ stay away from the thin part, we construct a random walk on $\systole(\no_g)$, and compute the probability of a single step of the random walk entering the thin part, and show that this probability is small.
+Estimating this probability reduces to computing an average over a ball in $\mathbb{H}$ because of Minsky's product region theorem.
+The random walk argument gives us that the number of geodesics of length at most $R$ entering the thin part is at most $\exp((\hNP - 1)R)$, where $\hNP$ is the discrete analog of the volume growth entropy of $\systole(\no_g)$.
+However, the total number of geodesics of length at most $R$ grows like $\exp((\hLP)R)$, where $\hLP$ is the growth rate of the number of lattice points.
+To show that the probability of a geodesic entering the thin part is exponentially small, we need to relate the two entropy terms, and show that $\hLP > \hNP - 1$.
+
+\subsubsection*{Showing $\hLP = \hNP$}
+We prove entropy equality by inducting on the complexity of the surface.
+We first show it for surfaces with Euler characteristic equal to $-1$ using direct methods, and reduce the inductive step to proving an estimate on complexity length for geodesic segments that spend a definite fraction of their time in thin part.
+
+\subsubsection*{Complexity length estimate}
+
+In this section, we
+% use the machinery of complexity length introduced by \textcite{dowdall2023lattice} to
+show that geodesic segments that spend a small but definite fraction of time near their end in the thin part are rare.
+We do this by showing that $\hNP$ for a proper subsurface is strictly smaller than $\hNP$ for the entire surface, and use the machinery of complexity length (due to \textcite{dowdall2023lattice}), which builds upon Minsky's product region theorem and hierarchical hyperbolicity of Teichmüller space, to show that geodesic segments ending in the thin part are rare.
 
 %%% Local Variables:
 %%% TeX-master: "main"
