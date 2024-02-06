@@ -38,6 +38,43 @@ If we can show that all the geodesic segments that leave $\systole(\no_g)$ are o
 \section{Upgrading random walk phenonomena to uniform measure}
 \label{sec:upgr-rand-walk}
 
+Recall that in order to prove equality of net point entropy and lattice point (i.e. the contents of Sections \ref{sec:equal-latt-point} and \ref{sec:line-gap-compl}), we needed to show that the proportion of bad points (see Definition \ref{defn:bad-points}) goes to $0$ with respect to the uniform measure on a ball of radius $R$ as $R$ goes to $\infty$.
+If one replaces the requirement that the net points be sampled from the uniform measure on a ball of radius $R$, and instead allow them to sampled from an $n$-fold convolution of a finitely supported measure (i.e. the random walk measure associated to an $n$-step random walk), the result is easier to prove.
+
+In fact, in the random walk measure setting, the following result of Taylor and Sisto holds.
+\begin{theorem}[Theorem 1.1 of \cite{taylorsisto}]
+  Let $\mu$ be a finitely supported measure on $\mcg(\os)$, where $\os$ is a surface of finite type.
+  Let $w_n$ be the random walk on $\mcg(\os)$ driven by the measure $\mu$.
+  Then there exists a constant $C$ such that the following holds with high probability.
+  \begin{align*}
+    \frac{\log n}{C} \leq \sup_{V \sqsubset \os} d_{\mathcal{C}(V)}(1, w_n) \leq C \log n
+  \end{align*}
+\end{theorem}
+
+Inspired by the above result, we can make a similar statement (and pose a question) about net points with respect to the uniform measure on a ball of radius $R$.
+\begin{question}
+  \label{ques:reduce-to-uniform}
+  Let $w_R$ be a net point picked uniformly at random from a ball of radius $R$.
+  Does there exist a constant $C > 0$ such that the following holds with high probability?
+  \begin{align}
+    \label{ques:log-bound}
+    \frac{\log n}{C} \leq \sup_{V \sqsubset \os} d_{\mathcal{C}(V)}(1, w_n) \leq C \log n
+  \end{align}
+\end{question}
+
+How does the above question relate to bad points?
+Recall that for a geodesic segment joining a bad point that is within distance $R$ of the base point $p$ to the base point spends at least $\vepb R$ time in the thin part of $\teich(\os)$.
+If a geodesic segment spends $\vepb R$ time in the thin part, then its subsurface projection to some subsurface grows faster than $\log R$, i.e. it grows linearly in $R$.
+
+If we can answer a version of Question \ref{ques:reduce-to-uniform}, we can prove the results of Section \ref{sec:equal-latt-point} without reducing to the complexity length arguments in Section \ref{sec:line-gap-compl}.
+
+More generally, it is easier to prove statistical results with respect to $n$-fold random walk measures, as opposed to uniform measures, since we can exploit independence between the steps of the random walk.
+One can in such situations ask whether a statement made with respect to the random walk measure continues to hold with respect to the uniform measure.
+An example of such a random walk measure to uniform measure upgrade appears in \textcite{choi2022pseudoanosovs}.
+They show that in a ball of radius $R$ in the mapping class group (with respect to the word metric), the proportion of elements that are not pseudo-Anosov goes exponentially decays to $0$, by showing a similar result holds when counting with respect to the $n$-fold convolution of the random walk generating measure, and transferring the estimate (with a worse exponential decay constant) to the uniform measure case.
+
+Performing such a transformation from random walk phenomena to uniform measure phenomena in a very general setting might be quite hard, since it is known that the hitting measure of the random walk on the boundary is mutually singular with respect to the limiting measure of the uniform measure, at least in the orientable case (see \textcite{gadre2015word}).
+
 
 
 %%% Local Variables:
