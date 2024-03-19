@@ -13,11 +13,11 @@
 \newcommand{\thesisdepartment}{Mathematics}
 \newcommand{\thesisyear}{2024}
 \newcommand{\thesiscommittee}{
-        \hspace*{10pt} Associate Professor Alexander Wright, Chair\\
-        \hspace*{10pt} Professor Ralf Spatzier\\
-        \hspace*{10pt} Professor Richard Canary\\
-        \hspace*{10pt} Professor Venky Nagar\\
-        \hspace*{10pt} Assistant Professor Pierre-Louis Blayac
+        \hspace*{80pt} Associate Professor Alexander Wright, Chair\\
+        \hspace*{80pt} Professor Ralf Spatzier, Cochair\\
+        \hspace*{80pt} Assistant Professor Pierre-Louis Blayac \\
+        \hspace*{80pt} Professor Richard Canary\\
+        \hspace*{80pt} Professor Venky Nagar
         }
 \newcommand{\thesisdedication}{Insert a thesis dedication} %your dedication here
 
@@ -53,6 +53,7 @@
 \label{chap:introduction}
 \pagenumbering{arabic} % arabic numbers (1,2,...) for pages
 \setcounter{page}{1} % setting this as page 1
+
 \input{chapter1-introduction.tex}
 
 % Chapter 2 - Some chapter
@@ -60,7 +61,7 @@
 % \label{chap:background}
 % \input{chapter2-background}
 
-\chapter{Limit set of non-orientable mapping class groups}
+\chapter{Limit set of Non-Orientable Mapping Class Groups}
 \label{chap:limit-set-paper}
 
 % \input{non-orientable-limit-set-v2/introduction.tex}
@@ -69,7 +70,7 @@
 \input{non-orientable-limit-set-v2/upper-bound.tex}
 \input{non-orientable-limit-set-v2/quasi-convex.tex}
 
-\chapter{Towards Patterson-Sullivan theory}
+\chapter{Towards Patterson-Sullivan Theory}
 \label{chap:stat-convex-cocompact}
 
 % \input{geodesics-in-thin-part/introduction.tex}
@@ -80,13 +81,14 @@
 \input{geodesics-in-thin-part/linear-gap.tex}
 \input{geodesics-in-thin-part/appendix.tex}
 
-\chapter{Future directions}
+\chapter{Future Directions}
 \label{chap:future-directions}
 \input{future-directions.tex}
 
 \newpage
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
 % \bibliographystyle{alpha}
+\appto{\bibsetup}{\raggedright}
 \printbibliography
 
 \end{document}

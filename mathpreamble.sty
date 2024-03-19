@@ -3,6 +3,13 @@
 \usepackage{url} % allow hyperlink in reference
 \singlespacing %change this to \doublespacing if you want your thesis double spaced
 
+% Fix offset in figure numbering
+\renewcommand{\thefigure}{\the\numexpr\value{chapter}-2\relax.\arabic{figure}}
+% \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+ % \the\numexpr\value{chapter}-1\relax
+
+
+
 \usepackage{datetime}
 \usepackage{graphicx}
 \usepackage{mathtools}
@@ -20,9 +27,9 @@
 % \usepackage{showlabels}
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = blue, %Colour for external hyperlinks
-  linkcolor    = blue, %Colour of internal links
-  citecolor   = blue %Colour of citations
+  urlcolor     = black, %Colour for external hyperlinks
+  linkcolor    = black, %Colour of internal links
+  citecolor   = black %Colour of citations
 }
 
 % Bibliography related
