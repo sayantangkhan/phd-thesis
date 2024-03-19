@@ -123,7 +123,10 @@
 % List of Abbreviations; Uncomment if needed
 % \chapter{LIST OF ABBREVIATIONS}
 % \input{acknowledgements}
-
+\cleardoublepage
+% \phantomsection
+\renewcommand*\listfigurename{LIST OF FIGURES}
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
 % Abstract
